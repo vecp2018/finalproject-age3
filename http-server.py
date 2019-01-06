@@ -6,7 +6,7 @@ import http.server, ssl
 def domake():
     # build directory
     #os.chdir("./../")
-    server_address = ('localhost', 8444)
+    server_address = ('192.168.43.117', 8444)
     httpd = http.server.HTTPServer(server_address, http.server.SimpleHTTPRequestHandler)
     httpd.socket = ssl.wrap_socket(httpd.socket,
                                    server_side=True,
